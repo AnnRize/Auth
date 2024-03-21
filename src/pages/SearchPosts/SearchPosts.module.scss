@@ -1,0 +1,16 @@
+.search {
+   margin: 20px auto;
+   padding: 0 50px;
+
+   &__string {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 20px;
+   }
+}
+
+@media (max-width: 500px) {
+   .search {
+      padding: 0;
+   }
+}

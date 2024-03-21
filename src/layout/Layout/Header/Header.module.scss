@@ -1,0 +1,10 @@
+.nav {
+   display: flex;
+   align-items: center;
+   color: var(--textColor);
+   background: var(--backgroundColor);
+   border-bottom: var(--border);
+   padding: 10px 40px;
+   height: 60px;
+   font-size: var(--fontSize);
+}

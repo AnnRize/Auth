@@ -1,0 +1,26 @@
+.add {
+   width: 600px;
+
+   &__title {
+      margin-bottom: 10px;
+   }
+
+   &__input {
+      margin-bottom: 1.2rem;
+   }
+
+   &__textarea {
+      margin-bottom: 1.2rem;
+   }
+
+   &__error {
+      font-size: 1rem;
+      text-align: left;
+      margin-bottom: 5px;
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: space-around;
+   }
+}

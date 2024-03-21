@@ -1,0 +1,15 @@
+.edit_buttons {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   width: max-content;
+
+   > span {
+      font-size: 1.2rem;
+      margin-right: 10px;
+   }
+
+   :not(:last-child) {
+      margin-right: 10px;
+   }
+}

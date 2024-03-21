@@ -1,0 +1,18 @@
+.user {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   padding: 30px;
+   width: 100%;
+   max-width: 1000px;
+   margin: 20px auto;
+   border: var(--border);
+   border-radius: 10px;
+   min-height: 600px;
+}
+
+@media (max-width: 500px) {
+   .user {
+      padding: 10px 0;
+   }
+}

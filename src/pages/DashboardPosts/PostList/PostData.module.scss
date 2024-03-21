@@ -1,0 +1,21 @@
+.post_data_row {
+   & > td {
+      min-width: fit-content;
+      width: 175px;
+      padding: 10px;
+      border: 2px solid var(--colorHover);
+   }
+}
+
+.active {
+   background: var(--backgroundHover);
+}
+
+@media (hover: hover) {
+   .post_data_row {
+      &:hover {
+         background: var(--backgroundHover);
+         cursor: pointer;
+      }
+   }
+}

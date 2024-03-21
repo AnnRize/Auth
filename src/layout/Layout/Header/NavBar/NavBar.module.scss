@@ -1,0 +1,50 @@
+.nav {
+   margin-right: 20px;
+
+   .side_menu_button {
+      padding: 0;
+      border: none;
+      display: none;
+      height: 40px;
+   }
+
+   &__link {
+      transition: 0.2s ease-out;
+
+      &:not(:last-child) {
+         margin-right: 20px;
+      }
+
+      &_active {
+         border-bottom: var(--borderActive);
+      }
+   }
+}
+
+@media (hover: hover) {
+   .nav {
+      .side_menu_button {
+         &:hover {
+            background: none;
+         }
+      }
+
+      &__link {
+         &:hover {
+            color: transparent;
+            text-shadow: 5px -5px 0px var(--colorHover);
+         }
+      }
+   }
+}
+
+@media (max-width: 1280px) {
+   .nav {
+      :not(:first-child) {
+         display: none;
+      }
+      .side_menu_button {
+         display: block;
+      }
+   }
+}

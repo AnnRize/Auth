@@ -1,0 +1,101 @@
+.post_item {
+   margin: 0 auto;
+   box-sizing: border-box;
+   border: var(--border);
+   border-radius: 10px;
+   padding: 25px 50px;
+   display: flex;
+   width: 100%;
+   max-width: 600px;
+   flex-direction: column;
+   transition: background-color 0.2s ease-out;
+   background: transparent;
+   z-index: 0;
+   overflow: hidden;
+   position: relative;
+
+   &:focus {
+      outline: 2px solid white;
+   }
+
+   &:hover .circle {
+      display: block;
+   }
+
+   .circle {
+      display: none;
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(var(--backgroundHover) 0% 30%, var(--backgroundColor) 60%);
+      top: 0;
+      left: 0;
+      z-index: -1;
+   }
+}
+.post_photo {
+   box-sizing: border-box;
+   aspect-ratio: 16/9;
+   object-fit: cover;
+   object-position: center;
+   border: var(--border);
+   width: 100%;
+   border-radius: 10px;
+   transition: transform 0.2s ease-out;
+}
+.post_title {
+   font-size: 2rem;
+   margin: 10px auto;
+   width: max-content;
+   text-transform: uppercase;
+}
+.post_description {
+   margin-bottom: 20px;
+   font-size: 1rem;
+
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
+   overflow: hidden;
+}
+.post_description::first-letter {
+   font-size: 2rem;
+}
+.info {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+
+   time {
+      margin-left: 10px;
+   }
+}
+
+@media (hover: hover) {
+   .post_item {
+      &:hover {
+         cursor: pointer;
+
+         & .post_photo {
+            transform: scale(1.05);
+         }
+      }
+   }
+}
+
+@media (max-width: 500px) {
+   .post_item {
+      padding: 0 0 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+   }
+   .post_photo {
+      border: none;
+      border-radius: 0;
+   }
+   .post_description,
+   .info {
+      padding: 0 10px;
+   }
+}

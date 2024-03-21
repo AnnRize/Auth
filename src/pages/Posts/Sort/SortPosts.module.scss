@@ -1,0 +1,14 @@
+.sort {
+   display: flex;
+   width: fit-content;
+   margin-bottom: 50px;
+
+   &__button {
+      padding: 0 10px;
+      line-height: 0;
+
+      &_order_active {
+         background: var(--backgroundHover);
+      }
+   }
+}

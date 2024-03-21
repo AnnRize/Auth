@@ -1,0 +1,13 @@
+.delete {
+   max-width: 600px;
+   text-align: center;
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: space-around;
+   }
+}

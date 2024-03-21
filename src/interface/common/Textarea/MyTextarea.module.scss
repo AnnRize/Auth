@@ -1,0 +1,21 @@
+.myTextarea {
+   box-sizing: border-box;
+   width: 100%;
+   outline: none;
+   padding: 10px;
+   background: var(--backgroundColor);
+   border: var(--border);
+   border-radius: 10px;
+   font-size: 1.5rem;
+   color: var(--textColor);
+   resize: none;
+
+   &::placeholder {
+      color: var(--textColor);
+      opacity: 80%;
+   }
+   &:focus::placeholder {
+      color: var(--textColor);
+      opacity: 40%;
+   }
+}

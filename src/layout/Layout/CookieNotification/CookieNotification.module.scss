@@ -1,0 +1,26 @@
+.container {
+   position: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   background: transparent;
+   bottom: 20px;
+   z-index: 9999;
+   min-width: 320px;
+}
+.modal {
+   text-align: center;
+   padding: 20px;
+   box-sizing: border-box;
+   background: var(--backgroundColor);
+   border: var(--border);
+   border-radius: 10px;
+   width: clamp(320px, 50%, 700px);
+}
+
+.cookie {
+   font-size: var(--fontSize);
+   color: var(--textColor);
+   margin-bottom: 20px;
+}

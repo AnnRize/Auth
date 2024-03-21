@@ -1,0 +1,37 @@
+.post {
+   display: flex;
+
+   .post_item__container {
+      width: 100%;
+      padding: 0 50px;
+      margin-bottom: 20px;
+   }
+
+   .last_post__container {
+      margin-left: auto;
+      border-left: var(--border);
+
+      .title {
+         font-size: 1.4rem;
+         font-style: italic;
+         text-align: center;
+         margin: 20px auto;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .post {
+      .last_post__container {
+         display: none;
+      }
+   }
+}
+
+@media (max-width: 500px) {
+   .post {
+      .post_item__container {
+         padding: 0 5px;
+      }
+   }
+}

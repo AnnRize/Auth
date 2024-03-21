@@ -1,0 +1,22 @@
+@keyframes fade {
+   0% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 0.4;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+
+%_before {
+   animation: fade 2s ease-in-out 0s infinite normal both;
+   position: absolute;
+   content: "";
+   height: 100%;
+   width: 100%;
+   background: var(--backgroundColor);
+   z-index: 1;
+   opacity: 0;
+}

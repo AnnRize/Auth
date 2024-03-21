@@ -1,0 +1,18 @@
+.breadcrumbs {
+   margin: 20px 0;
+   display: flex;
+   font-size: var(--fontSize);
+   font-style: italic;
+
+   &__slash {
+      margin: 0 10px;
+   }
+}
+
+@media (hover: hover) {
+   .breadcrumbs {
+      &__link:hover {
+         text-decoration: underline;
+      }
+   }
+}

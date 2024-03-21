@@ -1,0 +1,8 @@
+.prev_page_button {
+   display: block;
+   margin-right: 10px;
+
+   &:disabled {
+      cursor: default;
+   }
+}

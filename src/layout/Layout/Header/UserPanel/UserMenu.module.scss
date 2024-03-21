@@ -1,0 +1,124 @@
+.login {
+   &__link {
+      transition: 0.2s ease-out;
+
+      &:hover {
+         color: transparent;
+         text-shadow: 5px -5px 0px var(--colorHover);
+      }
+   }
+}
+
+.profile {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   position: relative;
+
+   &__icon {
+      border: var(--border);
+      border-radius: 50%;
+      width: 50px;
+      aspect-ratio: 1/1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &:hover {
+         cursor: pointer;
+      }
+   }
+
+   &__menu {
+      display: none;
+      animation: MenuFades 0.5s ease-out 0s 1 normal forwards;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      background: var(--backgroundColor);
+      border: var(--border);
+      top: calc(100% + 13px);
+      right: 0;
+      flex-direction: column;
+      position: absolute;
+      transition: 0.5s ease-out;
+      z-index: 4;
+
+      &::before {
+         position: absolute;
+         content: "";
+         width: 10px;
+         height: 10px;
+         background: var(--backgroundColor);
+         top: -7.5px;
+         right: 18px;
+         border-left: var(--border);
+         border-top: var(--border);
+         transform: rotateZ(45deg);
+      }
+
+      .menu__link {
+         transition: 0.2s ease-out;
+         margin-bottom: 10px;
+
+         &:hover {
+            color: var(--colorHover);
+         }
+
+         &:last-child {
+            color: var(--colorHover);
+            margin-bottom: 0;
+
+            &:hover {
+               color: var(--textColor);
+            }
+         }
+      }
+
+      &_visibility {
+         display: flex;
+      }
+   }
+}
+
+@media (hover: hover) {
+   .login {
+      &__link {
+         &:hover {
+            color: transparent;
+            text-shadow: 5px -5px 0px var(--colorHover);
+         }
+      }
+   }
+
+   .profile {
+      &__icon {
+         &:hover {
+            cursor: pointer;
+         }
+      }
+
+      &__menu {
+         .menu__link {
+            &:hover {
+               color: var(--colorHover);
+            }
+
+            &:last-child {
+               &:hover {
+                  color: var(--textColor);
+               }
+            }
+         }
+      }
+   }
+}
+
+@keyframes MenuFades {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}

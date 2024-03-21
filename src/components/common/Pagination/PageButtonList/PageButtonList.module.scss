@@ -1,0 +1,11 @@
+.page_button {
+   padding: 10px 15px;
+
+   &:not(:last-child) {
+      margin-right: 10px;
+   }
+}
+
+.current_page_button {
+   background: var(--backgroundHover);
+}

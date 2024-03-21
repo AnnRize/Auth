@@ -1,0 +1,91 @@
+.wrapper {
+   height: calc(100vh - 82px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   .form {
+      margin-top: -82px;
+      border-radius: 10px;
+      background: var(--backgroundColor);
+      border: var(--border);
+      padding: 20px;
+      width: 100%;
+      max-width: 30rem;
+
+      &__title {
+         font-size: clamp(2rem, 10vw, 3rem);
+         text-align: center;
+         margin-bottom: 1.2rem;
+      }
+
+      &__error {
+         font-size: 1rem;
+         margin-bottom: 5px;
+      }
+
+      &__input {
+         margin-bottom: 1.2rem;
+      }
+
+      &__button {
+         width: 100%;
+         overflow: hidden;
+         position: relative;
+         z-index: 1;
+         transition: color 0.5s ease-out;
+
+         &:not(:last-child) {
+            margin-bottom: 1.2rem;
+         }
+
+         // &:hover {
+         //    color: var(--colorHover);
+         //    background: none;
+
+         //    &::before {
+         //       animation: Crack 1.6s ease-in 0s infinite normal forwards;
+         //    }
+         // }
+
+         &::before {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            content: "";
+            background: url("/pink-button-back.png") no-repeat;
+            background-size: cover;
+            opacity: 0%;
+         }
+      }
+   }
+}
+
+@keyframes Crack {
+   0% {
+      opacity: 0%;
+   }
+   50% {
+      opacity: 60%;
+   }
+   100% {
+      opacity: 0%;
+   }
+}
+
+@media (hover: hover) {
+   .wrapper {
+      .form {
+         &__button {
+            &:hover {
+               color: var(--colorHover);
+               background: none;
+
+               &::before {
+                  animation: Crack 1.6s ease-in 0s infinite normal forwards;
+               }
+            }
+         }
+      }
+   }
+}

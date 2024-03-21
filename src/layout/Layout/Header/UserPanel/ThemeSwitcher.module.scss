@@ -1,0 +1,18 @@
+.theme {
+   max-height: 30px;
+
+   &__switcher {
+      padding: 0;
+      border: none;
+   }
+}
+
+@media (hover: hover) {
+   .theme {
+      &__switcher {
+         &:hover {
+            background: none;
+         }
+      }
+   }
+}

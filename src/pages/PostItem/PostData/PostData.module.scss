@@ -1,0 +1,51 @@
+.post {
+   display: flex;
+   flex-direction: column;
+
+   &__picture {
+      text-align: center;
+   }
+   &__photo {
+      box-sizing: border-box;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center;
+      border: var(--borderBold);
+      width: 80%;
+      border-radius: 20px;
+      margin: 0 auto;
+   }
+
+   &__title {
+      margin: 10px auto;
+      font-size: 3rem;
+   }
+
+   &__description {
+      font-size: var(--fontSize);
+
+      &::first-letter {
+         initial-letter: 2;
+      }
+   }
+
+   &__date {
+      font-size: var(--fontSize);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 20px;
+
+      .date {
+         margin-right: 10px;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .post {
+      &__photo {
+         width: 100%;
+      }
+   }
+}

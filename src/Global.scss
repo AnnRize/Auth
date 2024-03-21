@@ -1,0 +1,74 @@
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Roboto:wght@300;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Roboto:wght@300;500;700&family=Rubik+Burned&display=swap");
+
+@keyframes fade {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+:root {
+   --primary-dark: rgb(20, 20, 20);
+   --secondary-dark: rgb(50, 50, 50);
+   --primary-light: rgb(255, 255, 255);
+   --secondary-light: rgb(160, 160, 160);
+   --pink: #ff004c;
+   --textColor: var(--pink);
+   --footerBg: var(--secondary-dark);
+   --border: 2px solid var(--pink);
+   --fontSize: 1.25rem;
+}
+
+[data-theme="dark"] {
+   --backgroundColor: var(--primary-dark);
+   --backgroundHover: var(--secondary-dark);
+   --colorHover: var(--primary-light);
+   --borderActive: 2px solid var(--primary-light);
+}
+
+[data-theme="light"] {
+   --backgroundColor: var(--primary-light);
+   --backgroundHover: var(--secondary-light);
+   --colorHover: var(--primary-dark);
+   --borderActive: 2px solid var(--primary-dark);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: /* "Rubik Burned", */ "Open Sans", sans-serif;
+}
+html {
+   min-height: 100vh;
+   background: var(--backgroundColor);
+   color: var(--textColor);
+}
+
+body {
+   background: var(--backgroundColor);
+   // animation: fade 1s ease-in-out 0s 1 normal forwards;
+}
+
+a {
+   text-decoration: none;
+   color: var(--textColor);
+}
+
+*::-webkit-scrollbar {
+   height: 8px;
+   width: 8px; /* ширина scrollbar */
+   // width: 0px; /* убрать скролл */
+}
+*::-webkit-scrollbar-track {
+   border-radius: 20px;
+   background: var(--lighter); /* цвет дорожки */
+}
+*::-webkit-scrollbar-thumb {
+   background-color: var(--textColor); /* цвет плашки */
+   border-radius: 20px; /* закругления плашки */
+   // border: 3px solid red; /* padding вокруг плашки */
+}

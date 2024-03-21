@@ -1,0 +1,41 @@
+.myButton {
+   outline: none;
+   cursor: pointer;
+   // padding: 10px 20px;
+   border-radius: 10px;
+   border: var(--border);
+   color: var(--textColor);
+   font-size: 1.5rem;
+   background: var(--backgroundColor);
+
+   &:disabled {
+      opacity: 0.5;
+   }
+   // &:focus {
+   //    outline: 2px solid white;
+   // }
+}
+
+.s {
+   padding: 5px 10px;
+}
+.m {
+   padding: 10px 20px;
+}
+.l {
+   padding: 15px 30px;
+}
+
+@media (hover: hover) {
+   .myButton {
+      &:hover {
+         transition: background 0.2s ease-out;
+         background: var(--backgroundHover);
+      }
+      &:disabled {
+         &:hover {
+            background: none;
+         }
+      }
+   }
+}

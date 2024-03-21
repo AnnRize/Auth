@@ -1,0 +1,26 @@
+.user_data_row {
+   & > td {
+      min-width: fit-content;
+      width: 150px;
+      padding: 10px;
+      border: 2px solid var(--colorHover);
+   }
+
+   .user_password {
+      max-width: 30ch;
+      word-wrap: break-word;
+   }
+}
+
+.active {
+   background: var(--backgroundHover);
+}
+
+@media (hover: hover) {
+   .user_data_row {
+      &:hover {
+         background: var(--backgroundHover);
+         cursor: pointer;
+      }
+   }
+}

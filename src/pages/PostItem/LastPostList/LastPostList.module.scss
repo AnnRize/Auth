@@ -1,0 +1,7 @@
+.last_post__list {
+   position: sticky;
+   top: 82px;
+   &:last-child {
+      border-bottom: var(--border);
+   }
+}

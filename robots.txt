@@ -1,0 +1,5 @@
+User-agent: yandex
+disallow: /dashboard/*
+
+User-agent: googlebot
+disallow: /dashboard/*

@@ -1,0 +1,19 @@
+.update {
+   max-width: 600px;
+
+   &__title {
+      margin-bottom: 10px;
+   }
+
+   &__buttons {
+      display: flex;
+      justify-content: space-around;
+   }
+
+   &__input {
+      margin-bottom: 1.2rem;
+   }
+   &__textarea {
+      margin-bottom: 1.2rem;
+   }
+}

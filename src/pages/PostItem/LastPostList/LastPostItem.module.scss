@@ -1,0 +1,40 @@
+.last_post {
+   box-sizing: border-box;
+   width: clamp(200px, 30vw, 300px);
+   text-align: center;
+   padding: 0 0 20px;
+   border-top: var(--border);
+   transition: background 0.3s ease-out;
+   overflow: hidden;
+
+   &__title {
+      font-size: 1.5rem;
+   }
+
+   &__photo {
+      box-sizing: border-box;
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center;
+      border: none;
+      border-radius: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      transition: transform 0.1s ease-in-out;
+   }
+}
+
+@media (hover: hover) {
+   .last_post {
+      &:hover {
+         cursor: pointer;
+         background: var(--backgroundHover);
+      }
+      &__photo {
+         &:hover {
+            transform: scale(0.9);
+         }
+      }
+   }
+}

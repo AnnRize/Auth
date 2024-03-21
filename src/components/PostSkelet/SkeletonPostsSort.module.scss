@@ -1,0 +1,32 @@
+@import "../../styles/fade";
+
+.sort_skelet {
+   display: flex;
+
+   &__select {
+      position: relative;
+      background-color: var(--backgroundHover);
+      margin: 0 20px 50px 0;
+      width: 310px;
+      height: 57px;
+      border-radius: 10px;
+      overflow: hidden;
+
+      &::before {
+         @extend %_before;
+      }
+   }
+
+   &__order {
+      overflow: hidden;
+      position: relative;
+      width: 50px;
+      height: 57px;
+      border-radius: 10px;
+      background-color: var(--backgroundHover);
+
+      &::before {
+         @extend %_before;
+      }
+   }
+}

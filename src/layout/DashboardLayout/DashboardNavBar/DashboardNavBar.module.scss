@@ -1,0 +1,46 @@
+.nav {
+   box-sizing: border-box;
+   min-height: calc(100vh - 82px);
+   border-right: var(--border);
+   padding: 10px 30px;
+   max-width: max-content;
+
+   > ul {
+      position: sticky;
+      top: 92px;
+      list-style-type: none;
+
+      > li {
+         width: max-content;
+         font-size: var(--fontSize);
+         transition: color 0.2s ease-out;
+
+         .nav__link {
+            transition: color 0.2s ease-out;
+
+            &_active {
+               color: var(--colorHover);
+            }
+         }
+
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+      }
+   }
+}
+
+@media (hover: hover) {
+   .nav {
+      > ul {
+         > li {
+            .nav__link {
+               &:hover {
+                  cursor: pointer;
+                  color: var(--colorHover);
+               }
+            }
+         }
+      }
+   }
+}

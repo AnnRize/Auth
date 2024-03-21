@@ -1,0 +1,15 @@
+.pages_container {
+   width: max-content;
+   margin: 20px auto;
+
+   .page_number {
+      text-align: center;
+      font-size: var(--fontSize);
+      font-weight: 900;
+      margin-bottom: 5px;
+   }
+
+   .buttons_container {
+      display: flex;
+   }
+}

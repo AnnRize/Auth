@@ -1,0 +1,68 @@
+@keyframes loading {
+   0% {
+      margin-left: -20px;
+   }
+   100% {
+      margin-left: calc(100% + 20px);
+   }
+}
+
+%_before {
+   animation: loading 1.5s ease-in-out 0s infinite normal both;
+   position: absolute;
+   content: "";
+   margin-left: -20px;
+   height: 100%;
+   width: 20px;
+   background: var(--backgroundColor);
+   z-index: 1;
+}
+
+.user_skelet {
+   position: relative;
+   margin-bottom: 20px;
+   border: 2px solid var(--backgroundHover);
+   border-radius: 10px;
+   padding: 20px;
+   width: 100%;
+   box-sizing: border-box;
+   display: flex;
+   gap: 10px;
+   overflow: hidden;
+
+   &__photo {
+      position: relative;
+      box-sizing: border-box;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      background-color: var(--backgroundHover);
+      overflow: hidden;
+
+      &::before {
+         @extend %_before;
+      }
+   }
+   &__info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .info__item {
+         position: relative;
+         height: 2.5rem;
+         width: 30%;
+         border-radius: 10px;
+         background-color: var(--backgroundHover);
+         overflow: hidden;
+
+         &::before {
+            @extend %_before;
+         }
+
+         &:first-child {
+            margin-bottom: 10px;
+         }
+      }
+   }
+}

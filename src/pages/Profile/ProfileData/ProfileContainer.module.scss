@@ -1,0 +1,19 @@
+.profile {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   padding: 30px;
+   max-width: calc(60vw - 20px);
+   margin: 20px auto;
+   border: var(--border);
+   border-radius: 10px;
+   min-height: 600px;
+   width: 100%;
+   max-width: 1000px;
+}
+
+@media (max-width: 500px) {
+   .profile {
+      padding: 10px 0;
+   }
+}
