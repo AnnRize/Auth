@@ -2,32 +2,34 @@
 import { makeAutoObservable } from "mobx";
 import { IPost, IUser } from "types";
 
+type dataType = IPost | IUser | null;
+
 //Глобальное хранилище
 export const DashboardData = () => {
    return makeAutoObservable(
       {
          editMode: false,
          mode: 0,
-         postData: null as IPost | null,
-         userData: null as IUser | null,
-         get data() {
-            return this.postData ? this.postData : this.userData;
+         currentData: null as dataType,
+
+         get getPost() {
+            return this.currentData as IPost;
          },
+         get getUser() {
+            return this.currentData as IUser;
+         },
+
          setEditMode(value: boolean) {
             this.editMode = value;
          },
          setMode(mode: number) {
             this.mode = mode;
          },
-         setPostData(data: IPost | null) {
-            this.postData = data;
-         },
-         setUserData(data: IUser | null) {
-            this.userData = data;
+         setCurrentData(data: dataType) {
+            this.currentData = data;
          },
          fullReset() {
-            this.postData = null;
-            this.userData = null;
+            this.currentData = null;
             this.mode = 0;
             this.editMode = false;
          },

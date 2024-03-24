@@ -9,17 +9,17 @@ interface PostDataProps {
 
 export const PostData = observer(({ post }: PostDataProps) => {
    const {
-      dashboardDataStore: { setEditMode, postData, setPostData },
+      dashboardDataStore: { setEditMode, getPost, setCurrentData },
    } = useStore();
 
    return (
       <tr
          className={`${style.post_data_row} ${
-            post.id === postData?.id && style.active
+            post.id === getPost?.id && style.active
          }`}
          onClick={() => {
             setEditMode(true);
-            setPostData({ ...post });
+            setCurrentData({ ...post });
          }}
       >
          <td>{post.id}</td>

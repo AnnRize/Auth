@@ -14,7 +14,7 @@ interface DeleteUserProps {
 export const DeleteUser = observer(({ setModalActive }: DeleteUserProps) => {
    const queryClient = useQueryClient();
    const {
-      dashboardDataStore: { userData, fullReset },
+      dashboardDataStore: { getUser, fullReset },
    } = useStore();
 
    // user delete
@@ -38,7 +38,7 @@ export const DeleteUser = observer(({ setModalActive }: DeleteUserProps) => {
 
    // user mutate
    const deletePost = async () => {
-      mutate(userData!.id);
+      mutate(getUser!.id);
    };
 
    return (

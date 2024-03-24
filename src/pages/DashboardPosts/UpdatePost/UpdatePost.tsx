@@ -16,17 +16,17 @@ interface UpdatePostProps {
 export const UpdatePost = observer(({ setModalActive }: UpdatePostProps) => {
    const queryClient = useQueryClient();
    const {
-      dashboardDataStore: { postData, fullReset },
+      dashboardDataStore: { getPost, fullReset },
    } = useStore();
 
    // hook form
    const { handleSubmit, reset, register } = useForm({
       mode: "onChange",
       defaultValues: {
-         smimg: postData?.smimg || "",
-         laimg: postData?.laimg || "",
-         header: postData?.header || "",
-         description: postData?.description || "",
+         smimg: getPost?.smimg || "",
+         laimg: getPost?.laimg || "",
+         header: getPost?.header || "",
+         description: getPost?.description || "",
       },
    });
 
@@ -34,7 +34,7 @@ export const UpdatePost = observer(({ setModalActive }: UpdatePostProps) => {
    const { mutate } = useMutation(
       ["update_post"],
       async (data: ICreatePostNoTime) => {
-         await PostService.updatePostById(postData!.id, data);
+         await PostService.updatePostById(getPost!.id, data);
       },
       {
          onSuccess: () => {
@@ -53,11 +53,11 @@ export const UpdatePost = observer(({ setModalActive }: UpdatePostProps) => {
    // post mutate
    const updatePost = (post: ICreatePostNoTime) => {
       const tempPost: ICreatePostNoTime = {
-         smimg: !post.smimg ? postData!.smimg : post.smimg,
-         laimg: !post.laimg ? postData!.laimg : post.laimg,
-         header: !post.header ? postData!.header : post.header,
+         smimg: !post.smimg ? getPost!.smimg : post.smimg,
+         laimg: !post.laimg ? getPost!.laimg : post.laimg,
+         header: !post.header ? getPost!.header : post.header,
          description: !post.description
-            ? postData!.description
+            ? getPost!.description
             : post.description,
       };
       mutate(tempPost);

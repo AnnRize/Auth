@@ -14,7 +14,7 @@ interface DeletePostProps {
 export const DeletePost = observer(({ setModalActive }: DeletePostProps) => {
    const queryClient = useQueryClient();
    const {
-      dashboardDataStore: { postData, fullReset },
+      dashboardDataStore: { getPost, fullReset },
    } = useStore();
 
    // post delete
@@ -38,7 +38,7 @@ export const DeletePost = observer(({ setModalActive }: DeletePostProps) => {
 
    // post mutate
    const deletePost = async () => {
-      mutate(postData!.id);
+      mutate(getPost!.id);
    };
 
    return (

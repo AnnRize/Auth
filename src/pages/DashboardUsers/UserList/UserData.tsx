@@ -9,16 +9,17 @@ interface UserDataProps {
 
 export const UserData = observer(({ user }: UserDataProps) => {
    const {
-      dashboardDataStore: { setEditMode, userData, setUserData },
+      dashboardDataStore: { setEditMode, getUser, setCurrentData },
    } = useStore();
+
    return (
       <tr
          className={`${style.user_data_row} ${
-            user.id === userData?.id && style.active
+            user.id === getUser?.id && style.active
          }`}
          onClick={() => {
             setEditMode(true);
-            setUserData({ ...user });
+            setCurrentData({ ...user });
          }}
       >
          <td>{user.id}</td>

@@ -23,7 +23,7 @@ export const UpdateUser = observer(({ setModalActive }: UpdateUserProps) => {
    const queryClient = useQueryClient();
    const [role, setRole] = useState("user");
    const {
-      dashboardDataStore: { userData },
+      dashboardDataStore: { getUser },
    } = useStore();
 
    // hook form
@@ -35,7 +35,7 @@ export const UpdateUser = observer(({ setModalActive }: UpdateUserProps) => {
    const { mutate, isLoading } = useMutation(
       ["update_user"],
       async (data: IUpdateRole) => {
-         await UserService.updateRole(userData!.id, data);
+         await UserService.updateRole(getUser!.id, data);
       },
       {
          onSuccess: () => {
