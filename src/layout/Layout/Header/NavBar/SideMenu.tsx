@@ -44,7 +44,7 @@ export const SideMenu = observer(
                   Главная
                </NavLink>
                <NavLink to={"/posts"} className={isActivePage}>
-                  Новости
+                  Посты
                </NavLink>
                <NavLink to={"/users"} className={isActivePage}>
                   Пользователи
