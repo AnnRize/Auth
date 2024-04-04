@@ -18,7 +18,6 @@ export const Pagination = observer(({ totalPages, page }: PaginationProps) => {
    return (
       totalPages > 1 && (
          <div className={style.pages_container}>
-            <p className={style.page_number}>стр. {page}</p>
             <div className={style.buttons_container}>
                <PrevPage page={page} />
                <PageButtonList pagesArray={pagesArray} page={page} />
